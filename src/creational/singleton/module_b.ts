@@ -1,10 +1,10 @@
-import { MyDatabaseClassic } from './db/my-database-classic';
-import { myDatabaseClassic as myDatabaseClassicFromModuleA } from './module_a';
+import { MyDatabaseModule } from './db/my-database-module';
+import { myDatabaseModule as myDatabaseModuleFromModuleA } from './module_a';
 
-const myDatabaseClassic = MyDatabaseClassic.instance;
-myDatabaseClassic.add({ name: 'João', age: 39 });
-myDatabaseClassic.add({ name: 'Gabi', age: 34 });
-myDatabaseClassic.add({ name: 'Fernanda', age: 37 });
-myDatabaseClassic.show();
+const myDatabaseModule = MyDatabaseModule;
+myDatabaseModule.add({ name: 'João', age: 39 });
+myDatabaseModule.add({ name: 'Gabi', age: 34 });
+myDatabaseModule.add({ name: 'Fernanda', age: 37 });
+myDatabaseModule.show();
 
-console.log(myDatabaseClassic === myDatabaseClassicFromModuleA);
+console.log(myDatabaseModule === myDatabaseModuleFromModuleA);
